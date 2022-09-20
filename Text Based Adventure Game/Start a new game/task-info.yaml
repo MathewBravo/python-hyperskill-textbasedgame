@@ -220,5 +220,8 @@ files:
         TextBasedAdventureGameTest('game.game').run_tests()
   learner_created: false
 feedback_link: https://hyperskill.org/projects/161/stages/835/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Tue, 20 Sep 2022 19:09:24 UTC
 record: -1

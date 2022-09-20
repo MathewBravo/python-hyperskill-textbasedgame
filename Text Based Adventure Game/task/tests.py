@@ -135,6 +135,48 @@ class TextBasedAdventureGameTest(StageTest):
             return CheckResult.wrong("Your program should end with input 'quit'!")
         return CheckResult.wrong("Your program didn't ask for input!")
 
+    @dynamic_test
+    def test12(self):
+        main = TestedProgram()
+        main.start()
+
+        name = main.execute('1\njack')
+        if '1- name' not in name.lower():
+            return CheckResult.wrong("Your program didn't ask the user to enter the name!")
+        species = main.execute('Helen')
+        if '2- species' not in species.lower():
+            return CheckResult.wrong("Your program didn't ask the user to enter the species!")
+        gender = main.execute('human')
+        if '3- gender' not in gender.lower():
+            return CheckResult.wrong("Your program didn't ask for the gender of the character!")
+        snack = main.execute('f')
+        if '1- favourite snack' not in snack.lower():
+            return CheckResult.wrong("Your program didn't ask for the favorite snack!")
+        weapon = main.execute('apple')
+        if '2- a weapon for the journey' not in weapon.lower():
+            return CheckResult.wrong("Your program didn't ask the user to name a weapon for the journey!")
+        tool = main.execute('sword')
+        if '3- a traversal tool' not in tool.lower():
+            return CheckResult.wrong("Your program didn't ask the user for a traversal tool!")
+        level = main.execute('rope')
+        if 'choose your difficulty' not in level.lower():
+            return CheckResult.wrong("Your program didn't ask the user for a preferred difficulty level!")
+        ch_output = main.execute('2')
+        if 'good luck on your journey' not in ch_output.lower():
+            return CheckResult.wrong("Your program didn't print the 'Good luck on your journey!' message!")
+
+        characteristics = ['character', 'helen', 'human', 'f']
+        if not all(trait in ch_output.lower() for trait in characteristics):
+            return CheckResult.wrong("Your program didn't output all the character traits!")
+        inventory = ['inventory', 'apple', 'sword', 'rope']
+        if not all(inv in ch_output.lower() for inv in inventory):
+            return CheckResult.wrong("Your program didn't output the whole inventory list!")
+        diff_level = ['medium', 'number of lives', '3']
+        if not all(diff in ch_output.lower() for diff in diff_level):
+            return CheckResult.wrong("Your program didn't print either the difficulty level or the number of lives.")
+
+        return CheckResult.correct()
+
     def check_welcome(self, output, feedback=""):
         required_tokens = ["welcome", "to", "***"]
         if all(token in output.lower() for token in required_tokens):
