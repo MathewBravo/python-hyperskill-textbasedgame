@@ -1,0 +1,76 @@
+<html><body><h5 id="description">Description</h5>
+<p>In this stage, you will implement the new game function and the game stats.</p>
+<p>You need a game function that allows you to store all the necessary items and use them in your playthrough. The game stats will be saved once the player advances to another level.</p>
+<p>You need to store important variables when creating a new game such as:</p>
+<ul>
+<li>The username. You will need it in a later stage for the save file path.</li>
+<li>The character attributes: <code class="java">Name</code>, <code class="java">Species</code>, and the <code class="java">Gender</code>.</li>
+<li>The inventory: <code class="java">Snack</code>, <code class="java">Weapon</code>, and <code class="java">Tool</code>.</li>
+<li>The difficulty level: <code class="java">1- Easy</code>, <code class="java">2- Medium</code> and <code class="java">3- Hard</code>. The user needs to select the difficulty level either by the word or the index.</li>
+<li>The remaining lives: <code class="java">5</code> for an easy difficulty level, <code class="java">3</code> for a medium one, and <code class="java">1</code> for a hard one. You don't need to take the number of lives as input, it should be calculated on the basis of the level that the user chooses.</li>
+</ul>
+<p>You should get the game variables in the same order as in the Examples. If a player makes a mistake by choosing to create a new game, give them an option to go back to the main menu before creating a new player: <code class="java">Enter a user name to save your progress or type '/b' to go back</code>.</p>
+<p>The Level starts with 1 (the first level). The game is going to have 2 levels in total at the end.</p>
+<p>Don't forget to handle incorrect input as before!</p>
+<h5 id="objectives">Objectives</h5>
+<p>In this stage, your program should:</p>
+<ol>
+<li>Create and store the game state with variables such as the inventory, character attributes, difficulty, remaining lives, and the username.</li>
+<li>Have the option to go back to the menu before creating a new game. Don't forget that it should handle all the letter cases.</li>
+<li>Before the new game starts, output the message <code class="java">Good luck on your journey!</code> with the game stats below such as the character traits, inventory, difficulty, and the number of lives. Take a look at the Examples below to find out how you need to format the output.</li>
+</ol>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1: </strong><em>creating a new game.</em></p>
+<pre><code class="language-no-highlight">***Welcome to the Journey to Mount Qaf*** 
+    
+1- Press key '1' or type 'start' to start a new game
+2- Press key '2' or type 'load' to load your progress
+3- Press key '3' or type 'quit' to quit the game
+&gt; 1
+Starting a new game...
+Enter a user name to save your progress or type '/b' to go back &gt; new_user
+Create your character:
+1- Name &gt; john
+2- Species &gt; human
+3- Gender &gt; male
+Pack your bag for the journey:
+1- Favourite Snack &gt; apple
+2- A weapon for the journey &gt; sword
+3- A traversal tool &gt; rope
+Choose your difficulty:
+1- Easy
+2- Medium
+3- Hard
+&gt; 1
+Good luck on your journey!
+Your character: John, Human, Male
+Your inventory: Apple, Sword, Rope
+Difficulty: Easy
+Number of lives: 5
+</code></pre>
+<p> <strong>Example 2: </strong><em>unknown input.</em></p>
+<pre><code class="language-no-highlight">Choose your difficulty:
+1- Easy
+2- Medium
+3- Hard
+&gt; insane
+Unknown input! Please enter a valid one.
+&gt; easy</code></pre>
+<p><strong>Example 3: </strong><em>going back to the menu.</em></p>
+<pre><code class="language-no-highlight">***Welcome to the Journey to Mount Qaf*** 
+    
+1- Press key '1' or type 'start' to start a new game
+2- Press key '2' or type 'load' to load your progress
+3- Press key '3' or type 'quit' to quit the game
+&gt; 1
+Starting a new game...
+Enter a user name to save your progress or type '/b' to go back &gt; /b
+Going back to menu...
+
+***Welcome to the Journey to Mount Qaf*** 
+    
+1- Press key '1' or type 'start' to start a new game
+2- Press key '2' or type 'load' to load your progress
+3- Press key '3' or type 'quit' to quit the game
+&gt; </code></pre></body></html>

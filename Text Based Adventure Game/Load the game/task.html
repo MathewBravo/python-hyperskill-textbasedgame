@@ -1,0 +1,64 @@
+<html><body><h5 id="description">Description</h5>
+<p>In this stage, you are going to implement the loading feature in your game. Don't forget to add Level 2! It's up to you to write this part of your story, but as a starting point for the JSON structure, you can copy-paste the Level 1 JSON elements in story.json to set up Level 2 and change the values from there.</p>
+<p>We already included the loading option in our menu. Now it's time to polish it.</p>
+<p>First, you need to check how many users are stored in the save folder. Show the list of the usernames without the <em>%.json%</em> extension and take the user input. Read the save file. If there are no save files or the user input contains an error, output the <code class="java">No save data found!</code> message and go back to menu.</p>
+<p>Once you loaded the save,  you need to bring the game stats back into the game. After loading, the game should resume from where the player left off the last time.</p>
+<p>Implement Level 2 according to the gameplay conditions that have been given to you in Stage 3.</p>
+<p>When the player beats the game, output the <code class="java">Congratulations! You beat the game!</code> message before finishing the program.</p>
+<h5 id="objectives">Objectives</h5>
+<p>In this stage, your program should:</p>
+<ol>
+<li>Show the list of usernames with saves. </li>
+<li>Take the user input to load the game. Use the prompt "Type your user name:" to signal the user to start typing. </li>
+<li>Output the respective error messages if something is wrong in the code.</li>
+</ol>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1: </strong><em>loading the game.</em></p>
+<pre><code class="language-no-highlight">***Welcome to the Journey to Mount Qaf*** 
+    
+1- Press key '1' or type 'start' to start a new game
+2- Press key '2' or type 'load' to load your progress
+3- Press key '3' or type 'quit' to quit the game
+&gt; 2
+Choose your user name from the list:
+new_user
+Type your user name: &gt; new_user
+Loading your progress...
+Level 2
+
+You wake up the next day, feeling rested.
+You walk out of the cave, the bright sunlight dazzles you.
+You can see the peak of the mountain better.
+The view is splendid, but you notice a horse-sized dragon flying towards you.
+It lands in front of you and starts growling, exhaling grey smoke from the nose.
+
+What will you do? Type the number of the option or type '/h' to show help.
+
+1- Take a step closer and examine the creature.
+2- It looks dangerous, attack it with your Sword.
+3- Maybe you can give something to the dragon to pet it.
+&gt; </code></pre>
+<p><strong>Example 2: </strong><em>a typo in the username input.</em></p>
+<pre><code class="language-no-highlight">Choose your user name from the list:
+new_user
+CakeIsALie
+Type your user name: &gt; neu_use
+No save data found!</code></pre>
+<p><strong>Example 3: </strong><em>no save data.</em></p>
+<pre><code class="language-no-highlight">
+***Welcome to the Journey to Mount Qaf*** 
+    
+1- Press key '1' or type 'start' to start a new game
+2- Press key '2' or type 'load' to load your progress
+3- Press key '3' or type 'quit' to quit the game
+&gt; 2
+No save data found!
+
+***Welcome to the Journey to Mount Qaf*** 
+    
+1- Press key '1' or type 'start' to start a new game
+2- Press key '2' or type 'load' to load your progress
+3- Press key '3' or type 'quit' to quit the game
+&gt; 
+</code></pre></body></html>

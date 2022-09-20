@@ -1,0 +1,73 @@
+<html><body><h5 id="description">Description</h5>
+<p>The next thing we are going to implement is the saving feature.</p>
+<p>We need to save the game progress after the end of every level. By saying "the game progress", we mean the game stats introduced in the previous stage.</p>
+<p>In your project directory, make a folder called <code class="java">game</code> with a subfolder named <code class="java">saves</code>. For now, it is empty, but to implement your save functionality, your program will create new JSON files and write the items from the game stats. Each JSON save file will be named with the player's username, such that its filepath looks like: <code class="java">game/saves/{username}.json</code>. This way, each user will have their own save file. </p>
+<p>Write the following game stats to your save file: the character traits, in-game inventory, difficulty, remaining lives, and the current level. To understand how to write the stats to file you can check this example save JSON file for the user called 'new_user':  <a href="https://stepik.org/media/attachments/lesson/489000/new_user.txt" rel="noopener noreferrer nofollow" target="_blank">game/saves/new_user.txt</a>. Follow the same structure exactly as you see in this example text file, with the necessary keys and values in the JSON.</p>
+<p>As mentioned before, if you are using your own story, make sure you always include the weapon, the tool and the snack in the inventory and the game stats.</p>
+<p>Don't forget to change the level. When a player advances to the next level, increase the current level count by 1 and save the game.</p>
+<p>You can add some color to your text if you want to make it more fun. The <a href="https://pypi.org/project/termcolor/" rel="noopener noreferrer nofollow" target="_blank">Termcolor</a> library can help you with that. Our tests do not check the color of your text.</p>
+<h5 id="objectives">Objectives</h5>
+<p>In this stage, your program should:</p>
+<ol>
+<li>Create save files for each user.</li>
+<li>Write the game state when the player advances to another level. You can also add some color to your text, but we won't check it.</li>
+</ol>
+<h5 id="example">Example</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1: </strong><em>saving the game and advancing to another level.</em></p>
+<pre><code class="language-no-highlight">Level 1
+Once you reach the beginning of Mount Qaf, you are amazed by the majestic
+mountain that you are about to conquer. You look at the snowy peaks contemplating how to start the journey. There is a hill before you.
+
+What will you do? Type the number of the option or type '/h' to show help.
+
+1- Walk around a bit, maybe you'll find something interesting.
+2- Walk up the hill and begin climbing.
+3- Enjoy the scenery.
+&gt; 1
+
+You found a key.
+A new item has been added to your inventory: Key
+
+As you go up the mountain, you see the weird plants and flowers coming out of the surface of the mountain.
+Suddenly, you hear a thunder-like growl and feel the breeze of the giant wings behind you.
+You tilt your head up and see a dragon flying towards the top of the mountain.
+You heard stories that this is no ordinary mountain. They are proved to be true.
+You reach a higher level of the mountain and see a door with a lock hanging in the air, unattached.
+You also see a path up to the mountain, however, there is a human-sized bird in front of it.
+
+What will you do? Type the number of the option or type '/h' to show help.
+
+1- Walk up to the unattached door. You wonder where it leads, can you trust it?
+2- Examine the strange bird from afar.
+3- Walk towards the path and face the bird.
+&gt; 1
+You tried the key on the lock and the door opened.
+An item has been removed from your inventory: Key
+
+Once again, you have climbed up the mountain.
+The air starts to feel heavier. A cold breeze crawls up on your neck, it is snowing.
+You wrap your arms around your chest. You wish you had a thicker jacket.
+You saw a cave in the distance. Maybe you can get in to make a campfire.
+The cave's entrance is small, but the cave is vast, with a lot of icicles on the ceiling.
+You sit down trying to get warm. All of a sudden you feel as if you are not alone.
+You try to follow the sounds. You can hear a big laugh echoing against the cave walls.
+"Many travelers tried to conquer this mountain and very few survived," said the Darkness.
+You are too scared to answer. The voice continued, "Solve my riddle and I'll let you pass, it's that simple!"
+
+"As small as your thumb, I am light in the air, you may hear me before you see me, but trust that I'm here. What am I?"
+
+What will you answer? Type the number of the option or type '/h' to show help.
+
+1- A hummingbird.
+2- A mosquito.
+3- A bumblebee.
+&gt; 3
+The darkness said, "Correct! You can pass."
+You see a light coming from the inner cave. You decide to follow it.
+You've found a safe spot to rest. Saving your progress...
+Level 2
+Goodbye!
+
+Process finished with the exit code 0
+</code></pre></body></html>
